@@ -15,7 +15,6 @@ import java.util.TimeZone;
 @Slf4j
 public class LdkRoomApplication {
 
-
     public static void main(String[] args) {
         // 时区修正为上海
         TimeZone.setDefault(TimeZone.getTimeZone("Asia/Shanghai"));
