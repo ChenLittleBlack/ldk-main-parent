@@ -1,3 +1,5 @@
+package com.ldk.main.entity;
+
 import com.fasterxml.jackson.annotation.JsonFormat;
 import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.CreatedDate;
