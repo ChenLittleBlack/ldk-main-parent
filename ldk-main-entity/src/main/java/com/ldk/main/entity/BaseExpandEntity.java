@@ -25,6 +25,11 @@ import java.util.Date;
 public class BaseExpandEntity implements Serializable {
 
     /**
+     * 删除标志
+     */
+    private Integer removeFlag;
+
+    /**
      * 创建人
      */
     @CreatedBy
@@ -53,10 +58,5 @@ public class BaseExpandEntity implements Serializable {
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @LastModifiedDate
     private Date modifyTime;
-
-    /**
-     * 删除标志
-     */
-    private Integer removeFlag;
 
 }
