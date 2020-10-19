@@ -81,13 +81,14 @@ public class DruidConfiguration {
     @Bean
     @Profile({"dev"})
     public ServletRegistrationBean druidServlet() {
-        LOGGER.info("\n" +
-                "********************************************************" +
-                "\n\n" +
-                "加载Druid Servlet" +
-                "\n\n" +
-                "********************************************************" +
-                "\n");
+        LOGGER.info(
+            "\n" +
+            "********************************************************" +
+            "\n\n" +
+            "加载Druid Servlet" +
+            "\n\n" +
+            "********************************************************"
+        );
         return new ServletRegistrationBean(new StatViewServlet(), "/druid/*");
     }
 

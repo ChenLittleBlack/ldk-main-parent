@@ -20,7 +20,14 @@ public class LdkRoomApplication {
         TimeZone.setDefault(TimeZone.getTimeZone("Asia/Shanghai"));
         System.setProperty("spring.devtools.restart.enabled", "false");
         ApplicationContext ctx = SpringApplication.run(LdkRoomApplication.class, args);
-        log.info("####### [项目启动] bean总数:{} #######", ctx.getBeanDefinitionCount());
+        log.info(
+            "\n" +
+            "********************************************************" +
+            "\n\n" +
+            "[项目启动] bean总数:" + ctx.getBeanDefinitionCount() +
+            "\n\n" +
+            "********************************************************"
+        );
     }
 
 }
