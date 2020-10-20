@@ -1,7 +1,7 @@
-package com.ldk.main.service.impl;
+package com.ldk.main.service.impl.user;
 
-import com.ldk.main.repository.UserRepository;
-import com.ldk.main.service.UserService;
+import com.ldk.main.repository.user.UserRepository;
+import com.ldk.main.service.user.UserService;
 import org.springframework.stereotype.Service;
 
 /**

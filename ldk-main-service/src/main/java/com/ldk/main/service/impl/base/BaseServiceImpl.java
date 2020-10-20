@@ -1,6 +1,6 @@
-package com.ldk.main.service.impl;
+package com.ldk.main.service.impl.base;
 
-import com.ldk.main.service.BaseService;
+import com.ldk.main.service.base.BaseService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

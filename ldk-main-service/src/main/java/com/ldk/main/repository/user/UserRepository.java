@@ -1,4 +1,4 @@
-package com.ldk.main.repository;
+package com.ldk.main.repository.user;
 
 import org.springframework.stereotype.Repository;
 

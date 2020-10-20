@@ -1,4 +1,4 @@
-package com.ldk.main.repository;
+package com.ldk.main.repository.base;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;

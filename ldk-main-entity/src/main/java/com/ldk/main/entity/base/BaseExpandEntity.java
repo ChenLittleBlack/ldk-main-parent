@@ -1,4 +1,4 @@
-package com.ldk.main.entity;
+package com.ldk.main.entity.base;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import org.springframework.data.annotation.CreatedBy;

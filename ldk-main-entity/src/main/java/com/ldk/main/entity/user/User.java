@@ -1,5 +1,6 @@
-package com.ldk.main.entity;
+package com.ldk.main.entity.user;
 
+import com.ldk.main.entity.base.BaseExpandEntity;
 import lombok.Data;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;

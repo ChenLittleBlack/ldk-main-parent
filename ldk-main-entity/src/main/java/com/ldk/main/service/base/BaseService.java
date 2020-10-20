@@ -1,4 +1,4 @@
-package com.ldk.main.service;
+package com.ldk.main.service.base;
 
 import java.io.Serializable;
 

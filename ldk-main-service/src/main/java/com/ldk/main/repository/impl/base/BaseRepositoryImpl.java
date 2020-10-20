@@ -1,6 +1,6 @@
-package com.ldk.main.repository.impl;
+package com.ldk.main.repository.impl.base;
 
-import com.ldk.main.repository.BaseRepository;
+import com.ldk.main.repository.base.BaseRepository;
 import org.springframework.data.jpa.repository.support.JpaEntityInformation;
 import org.springframework.data.jpa.repository.support.SimpleJpaRepository;
 import org.springframework.data.repository.NoRepositoryBean;
