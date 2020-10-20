@@ -23,12 +23,14 @@ import java.util.TimeZone;
 )
 @ComponentScan(
         basePackages = {
-                "com.ldk.main.service"
+                "com.ldk.main.service",
+                "com.ldk.main"
         }
 )
 @EnableJpaRepositories(
         basePackages = {
-                "com.ldk.main.repository"
+                "com.ldk.main.repository",
+                "com.ldk.main"
         }
 )
 public class LdkRoomApplication {
@@ -42,7 +44,7 @@ public class LdkRoomApplication {
             "\n" +
             "********************************************************" +
             "\n\n" +
-            "[项目启动] bean总数:" + ctx.getBeanDefinitionCount() +
+            "[项目启动成功] bean总数:" + ctx.getBeanDefinitionCount() +
             "\n\n" +
             "********************************************************"
         );
