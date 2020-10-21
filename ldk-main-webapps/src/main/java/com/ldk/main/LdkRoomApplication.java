@@ -1,5 +1,6 @@
 package com.ldk.main;
 
+import com.ldk.main.repository.impl.base.BaseRepositoryImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -24,14 +25,15 @@ import java.util.TimeZone;
 @ComponentScan(
         basePackages = {
                 "com.ldk.main.service",
+                "com.ldk.main.web",
                 "com.ldk.main"
         }
 )
 @EnableJpaRepositories(
         basePackages = {
-                "com.ldk.main.repository",
-                "com.ldk.main"
-        }
+                "com.ldk.main.repository"
+        },
+        repositoryBaseClass = BaseRepositoryImpl.class
 )
 public class LdkRoomApplication {
 

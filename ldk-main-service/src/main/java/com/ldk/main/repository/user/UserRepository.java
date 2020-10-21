@@ -1,5 +1,7 @@
 package com.ldk.main.repository.user;
 
+import com.ldk.main.entity.user.User;
+import com.ldk.main.repository.base.BaseRepository;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -8,5 +10,5 @@ import org.springframework.stereotype.Repository;
  * @createDate 2020/09/27 16:56
  */
 @Repository
-public interface UserRepository {
+public interface UserRepository extends BaseRepository<User, Long> {
 }

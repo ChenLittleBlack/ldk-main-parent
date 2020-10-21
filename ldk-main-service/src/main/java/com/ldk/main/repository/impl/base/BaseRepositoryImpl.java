@@ -87,4 +87,5 @@ public class BaseRepositoryImpl<T, ID extends Serializable> extends SimpleJpaRep
         }
         return var1;
     }
+
 }

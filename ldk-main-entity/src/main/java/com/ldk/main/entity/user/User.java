@@ -24,16 +24,25 @@ public class User extends BaseExpandEntity {
      */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "userId")
     private Long userId;
 
     /**
      * 用户名
      */
+    @Column(name = "userName")
     private String userName;
 
     /**
      * 密码
      */
+    @Column(name = "password")
     private String password;
+
+    /**
+     * 昵称
+     */
+    @Column(name = "nickName")
+    private String nickName;
 
 }

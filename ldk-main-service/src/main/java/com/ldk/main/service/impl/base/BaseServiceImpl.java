@@ -6,6 +6,7 @@ import com.ldk.main.repository.base.BaseRepository;
 import com.ldk.main.service.base.BaseService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.io.Serializable;
 import java.util.Optional;
@@ -18,9 +19,10 @@ import java.util.Optional;
  */
 public abstract class BaseServiceImpl<T, ID extends Serializable> implements BaseService<T, ID> {
 
-    protected final Logger LOGGER = LoggerFactory.getLogger(this.getClass());
+    private final Logger LOGGER = LoggerFactory.getLogger(this.getClass());
 
-    protected BaseRepository<T, ID> baseRepository;
+    @Autowired
+    private BaseRepository<T, ID> baseRepository;
 
     /**
      * 根据id查询

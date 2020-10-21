@@ -60,6 +60,18 @@ public class ApiResult implements Serializable {
     }
 
     /**
+     * 构造函数
+     *
+     * @param apiResultCode
+     * @param data
+     */
+    public ApiResult(ApiResultCode apiResultCode, Object data) {
+        this.code = apiResultCode.getCode();
+        this.message = apiResultCode.getMessage();
+        this.data = data;
+    }
+
+    /**
      * 成功
      *
      * @param message
@@ -87,7 +99,7 @@ public class ApiResult implements Serializable {
      * @return
      */
     public static ApiResult success(Object data) {
-        return new ApiResult(ApiResultCode.SUCCESS.getCode(), ApiResultCode.SUCCESS.getMessage(), data);
+        return new ApiResult(ApiResultCode.SUCCESS, data);
     }
 
     /**
@@ -96,7 +108,45 @@ public class ApiResult implements Serializable {
      * @return
      */
     public static ApiResult success() {
-        return new ApiResult(ApiResultCode.SUCCESS.getCode(), ApiResultCode.SUCCESS.getMessage(), null);
+        return new ApiResult(ApiResultCode.SUCCESS);
+    }
+
+    /**
+     * 业务异常
+     *
+     * @param message
+     * @return
+     */
+    public static ApiResult businessError(String message) {
+        return new ApiResult(ApiResultCode.BUSINESS_ERROR.getCode(), message, null);
+    }
+
+    /**
+     * 业务异常
+     *
+     * @return
+     */
+    public static ApiResult businessError() {
+        return new ApiResult(ApiResultCode.BUSINESS_ERROR);
+    }
+
+    /**
+     * 系统异常
+     *
+     * @param message
+     * @return
+     */
+    public static ApiResult systemError(String message) {
+        return new ApiResult(ApiResultCode.SYSTEM_ERROR.getCode(), message, null);
+    }
+
+    /**
+     * 系统异常
+     *
+     * @return
+     */
+    public static ApiResult systemError() {
+        return new ApiResult(ApiResultCode.SYSTEM_ERROR);
     }
 
 }

@@ -1,10 +1,16 @@
 package com.ldk.main.web.user;
 
+import com.ldk.main.entity.base.ApiResult;
+import com.ldk.main.entity.base.exception.BusinessException;
+import com.ldk.main.entity.base.exception.SystemException;
+import com.ldk.main.entity.user.User;
 import com.ldk.main.service.user.UserService;
+import com.ldk.main.web.base.BaseController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
@@ -14,7 +20,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  */
 @Controller
 @RequestMapping("user/userAction")
-public class UserController {
+public class UserController extends BaseController<User, Long> {
 
     private UserService userService;
 
@@ -23,10 +29,26 @@ public class UserController {
         this.userService = userService;
     }
 
-    @RequestMapping(value = "/save", method = RequestMethod.POST)
+    /**
+     * 登录
+     *
+     * @param userName
+     * @param password
+     * @return
+     */
+    @RequestMapping(value = "/login", method = RequestMethod.POST)
     @ResponseBody
-    private void login(String userName, String password) {
-
+    private ApiResult login(
+            @RequestParam(value = "userName") String userName,
+            @RequestParam(value = "password") String password
+    ) {
+        try {
+            return userService.login(userName, password);
+        } catch (BusinessException e) {
+            return ApiResult.businessError(e.getMessage());
+        } catch (SystemException e) {
+            return ApiResult.systemError(e.getMessage());
+        }
     }
 
 }
