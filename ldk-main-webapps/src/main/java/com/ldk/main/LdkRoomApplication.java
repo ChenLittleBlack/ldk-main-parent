@@ -8,6 +8,8 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.scheduling.annotation.EnableAsync;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import java.util.TimeZone;
 
@@ -16,6 +18,8 @@ import java.util.TimeZone;
  * @date 2020/09/25 15:20
  */
 @SpringBootApplication
+@EnableTransactionManagement
+@EnableAsync
 @Slf4j
 @EntityScan(
         basePackages = {
